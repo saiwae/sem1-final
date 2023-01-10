@@ -1,0 +1,199 @@
+body {
+    background-color: #A3B18A;
+    background-image: url("https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png");
+}
+@font-face {
+    src: url(https://dl.dropbox.com/s/hfc6fjqu9kkxbt5/Sweet%20Creamy.ttf);
+    font-family: creamy;
+}
+creamy {
+    font-family: creamy;
+}
+@font-face {
+    font-family: pixel;
+    src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);
+}
+pixel {
+    font-family: pixel;
+}
+#container {
+    width: 32em;
+    height: 32em;
+    border: 4px double #2a3829;
+    border-radius: 16px;
+    position: relative;
+    background-color: #f7f7f7;
+    margin: auto;
+}
+.name {
+    font-family: creamy;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    background: linear-gradient(to top, #7D8F69 0%, #FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8em;
+    line-height: .9;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.menu {
+    position: absolute;
+    top: -6px;
+    right: 8px;
+    font-family: pixel;
+    font-size: 1.15em;
+}
+.title {
+    text-align: center;
+}
+.music {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 250px;
+    font-family: pixel;
+    font-size: 1em;
+}
+.amen {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 250px;
+    font-family: pixel;
+    font-size: 1em;
+    text-align: right;
+}
+a:link {
+    text-decoration: none;
+    color: #343a40;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    z-index: 10;
+}
+nav li {
+    list-style: none;
+    background-color: white;
+    color: #3d3d3d;
+    margin: 0;
+    flex: 1;
+    min-width: 230px;
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+nav a, nav a:visited {
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 0;
+    color: #3d3d3d;
+}
+nav a:hover {
+    background-color: #AAB977;
+    color: #343a40;
+}
+nav a.active {
+    color: #343a40;
+    background-color: #CCD5AE;
+    border-radius: 0 12px 0 0;
+    border: 1px solid black;
+}
+h1 {
+    color: rgba(61,61,61,1)
+}
+.dropdown-content {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    right: 0;
+    display: none;
+    z-index: 20;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+nav li:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content ul {
+    flex-direction: column;
+}
+.slide-bottom {
+    -webkit-animation: slide-bottom 500ms linear both;
+    animation: slide-bottom 500ms linear both;
+    position: absolute;
+    left: 1em;
+    bottom: 13em;
+    padding: 8px;
+    font-family: pixel;
+    border: 1px solid #344E41;
+    background-color: #F2F5E0;
+    width: 29em;
+    border-radius: 10px 0 10px 0;
+}
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+.qr {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+.fade-in {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.gallery {
+    width: 27em;
+    height: 9.5em;
+    display: inline-block;
+    overflow: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 7em;
+    left: 2.4em;
+    right: 2em;
+}
+.size {
+    height: 9em;
+    width: auto;
+}

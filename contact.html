@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="https://dl.dropbox.com/s/1j2jug6tqorb8p5/9f809025.gif">
+    <script>
+        function tb8_makeArray(n){
+            this.length = n;
+            return this.length;
+        }
+        tb8_messages = new tb8_makeArray(3);
+        tb8_messages[0] = "crochet for";
+        tb8_messages[1] = "a cause";
+        tb8_messages[2] = "♥ (✿╹◡╹)";
+        tb8_rptType = 'infinite';
+        tb8_rptNbr = 5;
+        tb8_speed = 250;
+        tb8_delay =1500;
+        var tb8_counter=1;
+        var tb8_currMsg=0;
+        var tb8_tekst ="";
+        var tb8_i=0;
+        var tb8_TID = null;
+        function tb8_pisi(){
+            tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+            document.title = tb8_tekst;
+            tb8_sp=tb8_speed;
+            tb8_i++;
+            if (tb8_i==tb8_messages[tb8_currMsg].length){
+                tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay;
+            }
+            if (tb8_currMsg == tb8_messages.length){
+                if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)){
+                    clearTimeout(tb8_TID);
+                    return;
+                }
+                tb8_counter++;
+                tb8_currMsg = 0;
+            }
+            tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+        }
+        tb8_pisi()
+    </script>
+</head>
+<body>
+<div id="container" class="fade-in">
+    <div class="name">
+        crochet for<br>
+        a cause
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a class="active">directory</a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="index.html">
+                                homepage</a></li>
+                            <li><a href="join.html">
+                                join the club</a></li>
+                            <li><a href="donate.html">
+                                how to donate</a></li>
+                            <li><a href="contact.html">
+                                contact us</a></li>
+                            <li><a href="mission.html">
+                                our mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="music">
+        crochet for a cause is a student run club based at edison high. we are entirely non-profit
+        and function solely off of donations and positive engagement.
+    </div>
+    <div class="amen">
+        established 2022 by<br>
+        bissetti ueno-dasilva
+    </div>
+    <div class="slide-bottom">
+        instagram: @ehscrochet<br>
+        remind: @4e6hhe6
+    </div>
+</div>
+</body>
+</html>
